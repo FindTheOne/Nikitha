@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Profile</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="profile.js"> </script>
+<link type="text/css" rel="stylesheet" href="css/blue.css" />
+<link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/cufon.yui.js"></script>
+<script type="text/javascript" src="js/scrollTo.js"></script>
+<script type="text/javascript" src="js/myriad.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body ng-app = "myModule" ng-controller="myController">
+
+	<div id="wrapper">
+	  <div class="wrapper-top"></div>
+	  <div class="wrapper-mid">
+	    <!-- Begin Paper -->
+	    <div id="paper">
+	      <div class="paper-top"></div>
+	      <div id="paper-mid">
+	        <div class="entry">
+	          <img class="portrait" ng-src="{{userImage}}" alt="" />
+	          <div class="self">
+	            <ul>
+	              {{userName}}
+	              <li class="ad">Location</li>
+	              <li class="mail">{{emailid}}</li>
+	              <li class="tel">telephone number</li>
+	            </ul>
+	          </div>
+	        </div>
+	       
+	        <div class="entry">
+	          <h2>SKILLS</h2>
+	          	<div ng-repeat="x in skills">
+	          		<p>{{ x }}</p>
+	          	</div>
+	        </div>
+	        <div class="entry">
+	          <h2>INTERESTS</h2>
+	          <div ng-repeat="x in interests">
+	          		<p>{{ x }}</p>
+	          </div>
+	        </div>
+	       
+	      </div>
+	      <div class="clear"></div>
+	      <div class="paper-bottom"></div>
+	    </div>
+	  
+	  </div>
+	  <div class="wrapper-bottom"></div>
+	</div>
+	<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+	
+</body>
+</html>
